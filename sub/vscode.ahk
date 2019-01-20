@@ -13,27 +13,62 @@ vk1D & l::
   send ^{PgDn}
   return
 ; focus to explorer
-vk1C & o::
+vk1C & j::
   send +^e
   return
-; open file
-vk1C & v::
-  run, "sub\vscode.ahk"
+; focus to git panel
+vk1C & g::
+  send +^g
   return
-vk1C & a::
-  run, "AutoHotkeyU64.ahk"
-  return
-vk1C & c::
-  run, "sub\chrome.ahk"
-  return
-vk1C & e::
-  run, "sub\explore.ahk"
-  return
+; focus to Editor 
 vk1C & k::
-  run, "C:\Users\Yarman\AppData\Roaming\Code\User\keybindings.json"
+  send ^e
   return
-vk1C & s::
+; focus to Terminal 
+vk1C & l::
+  send ^t
+  return
+; escape 
+vk1C & e::
+  send {Esc} 
+  return
+
+; open .ahk file
+vk1C & o::
+  Input, char, L1 
+  ; directory 
+  if char = V 
+  {
+  run, "sub\vscode.ahk"
+    return
+  }
+  ; text
+  if char = A 
+  {
+  run, "AutoHotkeyU64.ahk"
+    return
+  }
+  ; javascript
+  if char = C 
+  {
+  run, "sub\chrome.ahk"
+    return
+  }
+  if char = E 
+  {
+  run, "sub\explore.ahk"
+    return
+  }
+  if char = K 
+  {
+  run, "C:\Users\Yarman\AppData\Roaming\Code\User\keybindings.json"
+    return
+  }
+  if char = s 
+  {
   run, "C:\Users\Yarman\AppData\Roaming\Code\User\settings.json"
+    return
+  }
   return
 Return
 
