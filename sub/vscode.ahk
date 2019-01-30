@@ -64,7 +64,7 @@ vk1C & o::
   run, "C:\Users\Yarman\AppData\Roaming\Code\User\keybindings.json"
     return
   }
-  if char = s 
+  if char = S 
   {
   run, "C:\Users\Yarman\AppData\Roaming\Code\User\settings.json"
     return
